@@ -1,0 +1,48 @@
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Georgia, serif;
+}
+
+ul > li {
+    list-style-type: disc;
+}
+
+.circle {
+    list-style-type: circle;
+}
+
+thead > tr > th {
+    background: rgb(221, 221, 221);
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table > tbody > tr:nth-child(odd) > td {
+    background-color: rgb(241, 241, 241);
+}
+
+table, td {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+blockquote {
+    border-left: 5px solid rgb(221,221,221);
+    font-style: italic;
+}
+
+blockquote > p {
+    margin-left: 50px;
+}
+
+.align-right {
+    text-align: right;
+}
