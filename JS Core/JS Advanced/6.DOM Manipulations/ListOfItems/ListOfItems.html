@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>List of Items</h1>
+    <ul id="items">
+        <li>First</li>
+        <li>Second</li>
+    </ul>
+    <input type="text" id="newItemText" />
+    <input type="button" value="Add" onclick="addItem()">
+    <script>
+        function addItem() {
+            let input = $('#newItemText');
+            let listItems = $('#items');
+            let li = $('<li>');
+
+            li.text(input.val());
+            li.appendTo(listItems);
+            input.val('');
+        }
+    </script>
+</body>
+
+</html>
