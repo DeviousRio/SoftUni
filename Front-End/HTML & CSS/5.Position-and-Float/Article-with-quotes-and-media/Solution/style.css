@@ -1,0 +1,57 @@
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+    max-width: 60rem;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+p.site-title {
+    font-size: 45px;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+p.header-paragraph {
+    float: none;
+}
+
+img {
+    margin: 0px 10px;
+    float: right;
+    border: 1px solid black;
+    padding: 5px;
+    border-width: 5px;
+}
+
+blockquote {
+    font-style: italic;
+    width: 300px;
+    border-left: 5px solid rgb(221, 221, 221);
+    margin: 5px;
+    float: right;
+    padding: 0 30px;
+    color: grey;
+    height: 170px;
+}
+
+.author {
+    float: right;
+    color: grey;
+    margin-top: 10px;
+}
+
+body > main > p:nth-child(4) {
+    padding: 0 100px 0 0;
+    width: 550px;
+}
+
+.second-pic {
+    float: left;
+}

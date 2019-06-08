@@ -1,0 +1,58 @@
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.viewport {
+    padding: 5rem;
+    height: 90vh;
+}
+
+section.card {
+    display: block;
+    position: absolute;
+}
+
+.firstPic {
+    position: absolute;
+    top: 170px;
+    left: 450px;
+}
+
+.secondPic {
+    position: absolute;
+    left: 450px;
+}
+
+div:nth-child(1) {
+    background: rgb(30, 87, 153);
+    background: -moz-linear-gradient(left, rgb(30, 87, 153) 0%, rgb(32, 124, 202) 0%, rgb(41, 137, 216) 50%, rgb(125, 185, 232) 100%);
+    background: -webkit-linear-gradient(left, rgb(30, 87, 153) 0%, rgb(32, 124, 202) 0%, rgb(41, 137, 216) 50%, rgb(125, 185, 232) 100%);
+    background: linear-gradient(to right, rgb(30, 87, 153) 0%, rgb(32, 124, 202) 0%, rgb(41, 137, 216) 50%, rgb(125, 185, 232) 100%);
+}
+
+div:nth-child(2) {
+    background: rgb(173, 59, 109);
+    background: -moz-linear-gradient(left, rgb(173, 59, 109) 0%, rgb(210, 129, 20) 100%);
+    background: -webkit-linear-gradient(left, rgb(173, 59, 109) 0%, rgb(210, 129, 20) 100%);
+    background: linear-gradient(to right, rgb(173, 59, 109) 0%, rgb(210, 129, 20) 100%);
+}
+
+.fa-link {
+    position: absolute;
+    left: 900px;
+    top: 470px;
+    color: white;
+    font-size: 20px;
+}
+
+.fa-star {
+    position: absolute;
+    left: 900px;
+    top: 710px;
+    color: white;
+    font-size: 25px;
+}
