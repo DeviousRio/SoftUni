@@ -1,0 +1,44 @@
+html {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+nav {
+    display: inline-block;
+    margin-top: 50px;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+hr {
+    height: 3px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+
+li {
+    margin-top: 7px;
+    display: inline-block;
+}
+
+a {
+    float: right;
+    text-decoration: none;
+    color: rgb(73, 167, 116);
+    padding: 14px 16px;
+}
+
+.site-title {
+    float: left;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    float: right;
+}

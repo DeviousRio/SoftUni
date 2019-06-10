@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time" style="border:3px solid blue; text-align:center; font-size:2em; margin-bottom:10px">00:00</div>
+    <button id="startBtn">Start</button>
+    <button id="stopBtn" disabled="true">Stop</button>
+    <script>
+        window.onload = function stopWatch() {
+            let startBtnElement = document.getElementById('startBtn');
+            let stopBtnElement = document.getElementById('stopBtn');
+            let timeElement = document.getElementById('time');
+            let isTicking = null;
+            let seconds = 0;
+
+            startBtnElement.addEventListener('click', startTimer);
+            stopBtnElement.addEventListener('click', stopTimer);
+
+            function startTimer() {
+                startBtnElement.disabled = true;
+                stopBtnElement.disabled = false;
+               
+                isTicking = setInterval(tickingFunction, 1000);
+                timeElement.textContent = '00:00';
+
+                function tickingFunction() {
+                    seconds++;
+                    let currentMinutes = ('0' + Math.floor(seconds / 60)).slice(-2);
+                    let currentSeconds = ('0' + seconds % 60).slice(-2);
+                    timeElement.textContent = `${currentMinutes}:${currentSeconds}`;
+                }
+            }
+
+            function stopTimer() {
+                stopBtnElement.disabled = true;
+                startBtnElement.disabled = false;
+                clearInterval(isTicking);
+            }
+        }
+    </script>
+</body>
+
+</html>

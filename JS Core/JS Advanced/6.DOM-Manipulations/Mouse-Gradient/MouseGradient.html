@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="MouseGradient.css">
+    <title>Document</title>
+</head>
+
+<body onload="attachGradientEvents()">
+    <div id="gradient-box">
+        <div id="gradient">Click me!</div>
+    </div>
+    <div id="result"></div>
+    <script>
+        function attachGradientEvents() {
+            let resultElement = document.getElementById('result');
+            let gradientContainerElement = document.getElementById('gradient');
+
+            gradientContainerElement.addEventListener('mousemove', attachPosition);
+            gradientContainerElement.addEventListener('mouseout', clearPosition);
+
+            function attachPosition(e) {
+                let currentPosition = e.offsetX;
+                let percentage = Math.floor(currentPosition / this.clientWidth * 100);
+                resultElement.textContent = percentage + '%';
+            }
+
+            function clearPosition() {
+                resultElement.textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

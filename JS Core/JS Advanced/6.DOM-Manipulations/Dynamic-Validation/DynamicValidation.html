@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Focus</title>
+    <style>.error { border: 2px solid red; }</style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body onload="validate()">
+    <label for="email">Enter email:</label>
+    <input id="email" type="text" />
+    <script>
+        function validate() {
+            let inputElement = document.getElementById('email');
+            inputElement.addEventListener('change', validateFunction);
+
+            let emailPattern = /^[a-z]+@[a-z]+\.[a-z]+$/;
+
+            function validateFunction() {
+                let email = this.value;
+                
+                if (emailPattern.test(email)) {
+                    this.classList.remove('error');
+                   
+                } else {
+                    this.classList.add('error');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
