@@ -1,0 +1,105 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.2;
+    color: rgb(35, 68, 101);
+}
+
+body {
+    padding: 5rem;
+}
+
+form {
+    background: rgb(173, 216, 230);
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+form legend {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 0.8rem;
+}
+
+form p {
+    padding-bottom: 0.8rem;
+    display: flex;
+}
+
+form label {
+    flex: 0 0 20%;
+    margin-left: 1.5rem;
+}
+
+form span {
+    margin-left: 1.5rem;
+}
+
+form input {
+    outline: none;
+    flex: 0 0 50%;
+    margin-left: 1rem;
+}
+
+form select {
+    flex: 0 0 50%;
+    margin-left: 1rem;
+}
+
+form textarea {
+    margin-left: 1rem;
+    flex: 0 0 50%;
+}
+
+#submit {
+    font-weight: bold;
+    color: #FFF;
+    border: 2px solid rgb(35, 68, 101);
+    background-color: rgb(35, 68, 101);
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    flex: 0 0 20%;
+    margin-left: 10rem;
+}
+
+#submit:hover {
+    color: rgb(35, 68, 101);
+    background-color: #FFF;
+}
+
+#checkbox {
+    margin-left: 1rem;
+    align-self: center;
+    flex: 0 0 10%;
+}
+
+#male-gender,
+#female-gender {
+    padding: 0;
+    flex: 0 0 5%;
+    align-self: center;
+}
+
+#male-gender {
+    margin-left: 2.5rem;
+}
+
+p:nth-child(11) > label {
+    flex: 0 0 auto;
+    margin-left: 0;
+}
+
+p:nth-child(4) > label:nth-child(3),
+p:nth-child(4) > label:nth-child(5) {
+    margin-left: 1px;
+    flex: 0 0 1%;
+    align-content: center;
+}
