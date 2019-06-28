@@ -1,0 +1,72 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 60rem;
+    padding: 5em;
+    margin: 0 auto;
+    background: rgb(238, 238, 238);
+}
+
+.card {
+	display: block;
+	min-width: 15rem;
+	max-width: 30rem;
+	width: auto;
+	background: #FFF;
+	box-shadow: 0 0 2rem 0.5rem rgba(0,0,0,0.2);
+	border-radius: 0.3rem;
+	transition: box-shadow 0.3s ease;
+}
+
+.card .media {
+	position: relative;
+	overflow: hidden;
+	border-top-left-radius: 0.3rem;
+	border-top-right-radius: 0.3rem;
+}
+
+.card .media:after {
+	display: block;
+	content: '';
+	padding-top: 56.25%;
+}
+
+.card .media img {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: auto;
+}
+
+.card .content {
+	padding: 0.5rem 2rem;
+	overflow: hidden;
+}
+
+.card .content h3 {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.card .content .button {
+	display: block;
+	float: right;
+	padding: 0.4rem 1rem;
+	background: #090;
+	border-radius: 0.2rem;
+	color: #FFF;
+	text-decoration: none;
+	margin-bottom: 1.5rem;
+}
+
+.card .content .button:hover {
+	background: #060;
+}
