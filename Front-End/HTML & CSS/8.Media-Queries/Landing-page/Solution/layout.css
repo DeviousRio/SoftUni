@@ -1,0 +1,214 @@
+body {
+    background: #FFF;
+}
+
+.wrapper {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.site-header {
+    padding-top: 2em;
+}
+
+.site-header .wrapper {
+    max-width: initial;
+    display: flex;
+    align-items: center;
+    padding: 0 3em;
+}
+
+.site-header nav {
+    margin-left: auto;
+}
+
+.site-branding .site-title {
+    margin: 0;
+    padding: 0;
+    font-size: 3.5em;
+}
+
+.site-branding .site-title a {
+    color: purple;
+    text-decoration: none;
+}
+
+.site-description {
+    text-transform: uppercase;
+}
+
+.site-footer {
+    padding-top: 2em;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+.site-footer .wrapper {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.site-footer .widget {
+    flex-grow: 1;
+}
+
+.site-footer .widget:not(:last-child) {
+    padding-right: 2em;
+}
+
+.widget-about {
+    flex-basis: 25%;
+}
+
+@media (min-width: 900px) {
+    .site-footer .wrapper {
+        display: flex;
+    }
+
+    .widget-sitemap {
+        flex-basis: 35%;
+    }
+}
+
+.widget-sitemap ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 0 2em 0;
+    margin: 0;
+}
+
+.widget-sitemap li {
+    display: block;
+    list-style: none outside;
+    flex: 0 0 48%;
+}
+
+.widget-contacts {
+    flex-basis: 30%;
+}
+
+.widget-contacts ul {
+    margin: 0;
+    padding: 0;
+}
+
+.widget-contacts li {
+    display: block;
+    list-style: none outside;
+}
+
+ul.users-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul.users-list li {
+    flex: 0 0 48%;
+    display: block;
+    list-style: none outside;
+    text-align: center;
+    margin-bottom: 3.5em;
+}
+
+@media (min-width: 900px) {
+    ul.users-list li {
+        flex: 0 0 30%;
+    }
+}
+
+ul.users-list li:nth-child(4),
+ul.users-list li:nth-child(5),
+ul.users-list li:nth-child(6) {
+    padding-top: 2em;
+}
+
+ul.users-list span {
+    display: block;
+}
+
+ul.users-list .user-avatar {
+    width: 8em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+ul.users-list .user-name {
+    font-weight: bold;
+}
+
+ul.users-list .user-position + .user-name,
+ul.users-list .user-position + .user-message {
+    padding-top: 1em;
+}
+
+.user-message {
+    padding: 2em;
+}
+
+.user-avatar {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0.2em 1em 0 rgba(0, 0, 0, 0.5);
+}
+
+.user-avatar:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9) inset;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.user-avatar:after {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.user-avatar img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%; left: 0%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.button-primary {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
+    padding: 0.5em;
+    outline: none;
+}
+
+.button-primary:focus,
+.button-primary:hover {
+    background: purple;
+    color: #FFF;
+    border-color: purple;
+}
+
+hr {
+    color: rgb(116, 116, 116);
+    box-shadow: 0px 5px 10px 0px rgba(117,117,117,1);
+}
+
+.fas {
+    padding-right: 0.5em;
+}

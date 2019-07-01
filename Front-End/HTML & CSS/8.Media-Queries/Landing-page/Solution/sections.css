@@ -1,0 +1,56 @@
+.section {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.section header {
+    text-align: center;
+}
+
+.section header:after {
+    display: block;
+    content: '';
+    width: 6em;
+    height: 4px;
+    background: #000;
+    margin: 1em auto 2em auto;
+}
+
+.section header a {
+    color: #000;
+    text-decoration: none;
+}
+
+.section header h1,
+.section header h2,
+.section header h3 {
+    margin: 0;
+}
+
+.section.section-cta .wrapper {
+    padding: 2em;
+}
+
+.section.section-cta header {
+    text-align: left;
+}
+
+.section.section-cta header:after {
+    display: none;
+}
+
+.section.section-newsletter {
+    background: purple;
+    padding: 2em;
+    margin-top: 5em;
+}
+
+.section.section-newsletter header,
+.section.section-newsletter header a {
+    color: #FFF;
+}
+
+.section.section-testimonials {
+    padding: 2em;
+}
+

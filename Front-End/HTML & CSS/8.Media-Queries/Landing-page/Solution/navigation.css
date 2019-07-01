@@ -1,0 +1,111 @@
+.site-nav {}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.site-nav li {
+    display: block;
+    list-style: none outside;
+    padding: 0 0.5em;
+}
+
+.site-nav a {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: #000;
+    border-radius: 0.2em;
+    outline: none;
+}
+
+.site-nav a:focus,
+.site-nav a:hover {
+    background: purple;
+    color: #FFF;
+}
+
+.main-nav-toggle {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.main-nav-toggle-button {
+    display: none;
+}
+
+.main-nav-toggle-button i {
+    margin-right: 0.5em;
+}
+
+/* Phones and Tablets */
+@media (max-width: 900px) {
+    header {
+        padding: 0 2em;
+        max-width: 100%;
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .site-nav ul {
+        display: block;
+    }
+
+    .site-nav ul li {
+        display: block;
+    }
+
+    .main-nav-toggle-button {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    .main-nav-toggle-button .open {
+        display: block;
+        text-align: center;
+        margin-bottom: 9em;
+    }
+
+    .main-nav-toggle-button .close {
+        display: none;
+    }
+
+    .main-nav-toggle:checked + header {
+        display: block;
+    }
+
+    .main-nav-toggle:checked + header .main-nav-toggle-button .open {
+        display: none;
+    }
+
+    .main-nav-toggle:checked + header .main-nav-toggle-button .close {
+        display: block;
+        margin: 1em 1.2em 13.2em 0;
+    }
+
+    .main-nav-toggle:checked + header .site-nav {
+        display: block;
+    }
+
+    .main-nav-toggle:checked + header .site-nav ul {
+        display: block;
+    }
+
+    .main-nav-toggle:checked + header .site-nav ul li {
+        background: purple;
+        margin-bottom: 0.2em;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+
+    .main-nav-toggle:checked+header .site-nav ul li a {
+        color: #FFF;
+        display: block;
+    }
+}

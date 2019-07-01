@@ -1,0 +1,24 @@
+form .field {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    border: none;
+    background: #FFF;
+    border-radius: 0.1em;
+    color: #000;
+    padding: 0.5em 0.5em;
+}
+
+form input[type="email"] {
+    margin-right: 1em;
+    width: 50%;
+}
+
+form input[type="submit"] {
+    font-weight: bold;
+}
