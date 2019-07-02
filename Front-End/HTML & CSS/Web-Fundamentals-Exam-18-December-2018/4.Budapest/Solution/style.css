@@ -1,0 +1,244 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css");
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
+}
+
+header .site-logo img {
+    background: rgb(197, 161, 51);
+    padding: 1em;
+    float: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 5em;
+    height: 101px;
+    position: relative;
+    top: 30px;
+}
+
+header .top-nav {
+    color: rgb(77, 88, 118);
+    text-align: right;
+    margin-right: 5em;
+    margin-bottom: 1em;
+    float: right;
+}
+
+header .top-nav ul {
+    text-align: center;
+}
+
+header .top-nav ul li {
+    display: inline-block;
+    width: 150px;
+    padding-top: 16px;
+}
+
+header .top-nav ul li p {
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 0.5em;
+}
+
+header .top-nav ul li i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header .main-nav {
+    color: rgb(77, 88, 118);
+    text-align: right;
+    margin-right: 5em;
+    clear: right;
+}
+
+header .main-nav ul li {
+    display: inline-block;
+    padding: 10px 16px;
+}
+
+header .main-nav ul li:last-child {
+    margin-right: 25px;
+}
+
+header .main-nav ul li a {
+    text-decoration: none;
+    color: rgb(77, 88, 118);
+}
+
+header .slide {
+    background: url("../img/slider.jpg") no-repeat center;
+    background-size: cover;
+    height: 70vh;
+}
+
+header .slide article {
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    width: 30vw;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    padding: 2em;
+}
+
+header .slide article h1 {
+    padding-bottom: 1em;
+}
+
+header .slide article button {
+    background: transparent;
+    color: rgb(249, 162, 9);
+    margin-top: 1em;
+    padding: 0.5em;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+
+.site-main {
+    background: rgb(197, 161, 51);
+    color: #FFF;
+    padding: 3em 0 0 0;
+}
+
+.site-main .card-info {
+    width: 35%;
+    margin-left: 32em;
+}
+
+.site-main .card-info h2 {
+    text-align: center;
+}
+
+.site-main .card-info p {
+    padding-top: 1em;
+}
+
+.site-main .card-info button {
+    background: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+    padding: 0.5em;
+    margin: 2em 0 2em 15em;
+    width: 8em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-images h2 {
+    color: rgb(77, 88, 118);
+    text-align: center;
+    letter-spacing: 0.5em;
+    padding: 1em;
+    width: 50em;
+    margin-left: 7em;
+}
+
+.card-images p {
+    color: rgb(77, 88, 118);
+    text-align: center;
+}
+
+ul.destinations-list {
+    display: flex;
+    justify-content: center;
+}
+
+ul.destinations-list li {
+    flex: 0 0 10%;
+    display: block;
+    list-style: none outside;
+    text-align: center;
+    padding: 1em;
+}
+
+ul.destinations-list .avatar {
+    width: 10em;
+    margin: 0 auto;
+}
+
+.avatar {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0.2em 1em 0 rgba(0, 0, 0, 0.5);
+}
+
+.avatar:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9) inset;
+    z-index: 10;
+    pointer-events: none; 
+}
+
+.avatar:after {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.avatar img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%; left: 0%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+ul.destinations-list span {
+    display: block;
+    color: rgb(77, 88, 118);
+}
+
+ul.destinations-list .message {
+    font-size: 0.7em;
+    padding-top: 1.5em;
+}
+
+.card-images {
+    background: #FFF;
+    
+}
+
+.card-images ul li {
+    list-style: none outside;
+}
+
+.card-newsletter {
+    background: rgb(197, 161, 51);
+    color: #FFF;
+    padding: 2rem;
+}
+
+.card-newsletter button {
+    float: right;
+    background: transparent;
+    color: #FFF;
+    padding: 0.7em;
+    width: 10em;
+    font-weight: bold;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+}
