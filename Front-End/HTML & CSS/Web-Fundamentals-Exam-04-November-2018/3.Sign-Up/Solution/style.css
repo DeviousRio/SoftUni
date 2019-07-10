@@ -1,0 +1,136 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Open Sans, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper section {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper .image-section {
+    background: url('../images/cover.jpg'), no-repeat center center;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper .image-section .softuni {
+    color: #FFF;
+    font-weight: bold;
+    flex: 0 0 100%;
+    padding: 1rem 0 0 1rem;
+    /* margin-bottom: 5rem; */
+    font-size: 13px;
+}
+
+.wrapper .image-section h1 {
+    flex: 0 0 100%;
+    text-align: center;
+    color: #FFF;
+    font-weight: normal;
+    font-size: 1.7rem;
+    padding-top: 9rem;
+}
+
+.wrapper .image-section .mini-title {
+    flex: 0 0 100%;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+}
+
+.wrapper .image-section ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.wrapper .image-section ul li {
+    list-style: none outside;
+    justify-content: center;
+    padding: 0 0.5rem 1rem 0.5rem;
+    margin-top: 5rem;
+}
+
+.wrapper .image-section ul li i {
+    color: #FFF;
+}
+
+.wrapper .content {
+    border: 1px solid rgb(212, 216, 225);
+    padding: 1.5rem;
+}
+
+.wrapper .content form {
+    width: 100%;
+}
+
+.wrapper .content form p {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper .content form div {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    color: rgb(212, 216, 225);
+}
+
+.wrapper .content input {
+    flex: 0 0 100%;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid rgb(212, 216, 225);
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+}
+
+.reg-button {
+    text-align: center;
+    flex: 0 0 25%;
+    color: #FFF;
+    background: rgb(17, 17, 17);
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    padding: 0.3rem 1rem;
+}
+
+.ninja-button {
+    flex: 0 0 50%;
+    color: rgb(212, 216, 225);
+    margin-top: 1.5rem;
+    padding: 0.3rem;
+    margin-left: 0.3rem;
+}
