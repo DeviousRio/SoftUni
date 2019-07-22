@@ -1,0 +1,36 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em auto;
+}
+
+.wrapper a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #2D2D2D;
+    font-weight: bold;
+    background: #FFF;
+    outline: 5px solid #203F5D;
+    padding: 0.7em 1.2em;
+    transition: outline-width 0.5s linear;
+}
+
+.wrapper a:first-child {
+    margin-right: 1em;
+}
+
+.wrapper a:hover {
+    outline-width: 13px;
+}
