@@ -1,0 +1,28 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    max-width: 80em;
+    margin: 1em auto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 50px 50px 50px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+
+div {
+    font-size: 13px;
+    background: #000;
+    color: #FFF;
+    border-radius: 0.2em;
+    padding: 1.3em;
+}
