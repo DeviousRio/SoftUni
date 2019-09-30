@@ -1,0 +1,132 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.wrapper .form-title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 3rem;
+    color: rgb(70, 70, 70);
+    letter-spacing: 1.2px;
+    border-bottom: 2px solid rgb(0, 122, 204);
+}
+
+.wrapper form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+}
+
+.wrapper form p {
+    display: flex;
+    flex: 0 0 100%;
+    margin-top: 0.6rem;
+}
+
+.wrapper .type {
+    flex: 0 0 100%;
+    color: rgb(70, 70, 70);
+    margin-bottom: 0.5rem;
+}
+
+.wrapper .type:before {
+    content: '*';
+    color: rgb(255, 4, 6);
+    padding-right: 0.1rem;
+}
+
+.wrapper input {
+    width: 100%;
+    padding: 0.3rem;
+    padding-left: 2.5rem;
+    border: 1px solid rgb(196, 223, 233);
+    border-radius: 0.3rem;
+}
+
+a {
+    text-decoration: none;
+    margin-top: 1rem;
+    flex: 0 0 100%;
+    color: #FFF;
+    background: rgb(0, 122, 204);
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.min-chars {
+    color: rgb(214, 213, 212);
+    margin-left: 0.2rem;
+}
+
+span {
+    position: absolute;
+}
+
+.fa-user {
+    margin-top: 2.9rem;
+    margin-left: 0.5rem;
+    color: rgb(70, 70, 70);
+}
+
+.fa-user:after {
+    content: '';
+    border-right: 1px solid rgb(70, 70, 70);
+    margin-left: 0.5rem;
+}
+
+.fa-envelope {
+    margin-top: 7.9rem;
+    margin-left: 0.5rem;
+    color: rgb(70, 70, 70);
+}
+
+.fa-envelope:after {
+    content: '';
+    border-right: 1px solid rgb(70, 70, 70);
+    margin-left: 0.5rem;
+}
+
+.fa-mobile-alt {
+    margin-top: 12.9rem;
+    margin-left: 0.5rem;
+    color: rgb(70, 70, 70);
+}
+
+.fa-mobile-alt:after {
+    content: '';
+    border-right: 1px solid rgb(70, 70, 70);
+    margin-left: 0.5rem;
+}
+
+.fa-lock {
+    margin-top: 17.7rem;
+    margin-left: 0.5rem;
+    color: rgb(70, 70, 70);
+}
+
+.fa-lock:after {
+    content: '';
+    border-right: 1px solid rgb(70, 70, 70);
+    margin-left: 0.5rem;
+}

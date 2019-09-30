@@ -1,0 +1,34 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 3rem;
+}
+
+@media screen and (min-width: 600px) {
+    .mq-width:after {
+        content: 'Viewport width is larger than 600px';
+        color: rgb(3, 91, 34);
+    }
+}
+
+@media screen and (min-height: 600px) {
+    .mq-height:after {
+        content: 'Viewport height is larger than 600px';
+        color: rgb(3, 91, 34);
+    }
+}
+
+@media (min-aspect-ratio: 8/5) {
+    .mq-ar:after {
+        content: 'Aspect Ratio is larger than 8/5';
+        color: rgb(3, 91, 34);
+    }
+}

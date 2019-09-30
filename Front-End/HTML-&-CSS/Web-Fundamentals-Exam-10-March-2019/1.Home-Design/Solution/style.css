@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Courgette, cursive;
+    box-sizing: border-box;
+    background: rgb(245, 245, 245);
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin: 2rem auto;
+}
+
+.wrapper h1 {
+    flex: 0 0 100%;
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.wrapper .mini-title {
+    flex: 0 0 50%;
+    text-align: center;
+    color: rgb(203, 32, 39);
+    font-size: 2rem;
+    margin-left: 23rem;
+}
+
+.wrapper .content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper article {
+    padding: 1rem;
+    flex: 0 0 35%;
+    align-content: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.wrapper article h2 {
+    margin-top: -3rem;
+    padding-top: 0.2rem;
+    background: rgb(255, 255, 255);
+}
+
+.wrapper article h2:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 1rem;
+    border-bottom: 1px solid rgb(208, 25, 25);
+}
+
+.wrapper article p {
+    padding-top: 1rem;
+    background: rgb(255, 255, 255);
+}
+
+.wrapper .content .image {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapper .content .image:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10;
+}
+
+.wrapper .content .image:after {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.wrapper .content .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.left-article p:nth-child(4) {
+    padding: 2.3rem 0 2rem 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.middle-article p:nth-child(4),
+.right-article p:nth-child(4) {
+    padding: 1rem 0 2rem 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.wrapper .content .continue {
+    margin-bottom: 5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+i {
+    background: #FFF;
+    color: rgb(208, 25, 25);
+    cursor: pointer;
+    margin-left: 0.3rem;
+}

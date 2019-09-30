@@ -1,0 +1,76 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 5em auto;
+    background: url('../Requirements-and-Resources/images/image.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.wrapper:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(9,27,224,0.51) 0%, rgba(9,27,224,0.5) 0%, rgba(2,98,194,0.5) 100%);
+    z-index: 1;
+}
+
+.wrapper .close {
+    color: #FFF;
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    margin: 0.5em;
+}
+
+.wrapper .fa-times {
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+.wrapper ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.wrapper ul li {
+    flex: 0 0 20%;
+    padding: 5em 6em;
+    text-align: center;
+    list-style: none outside;
+    margin-bottom: 2em;
+}
+
+.wrapper ul li div i {
+    font-size: 2.5em;
+    color: rgb(236, 132, 33);
+}
+
+.wrapper ul li div p {
+    color: #FFF;
+}
+
+.wrapper .bold {
+    font-weight: bold;
+    padding: 0.8em 0 0 0;
+    font-size: 1.5em;
+}

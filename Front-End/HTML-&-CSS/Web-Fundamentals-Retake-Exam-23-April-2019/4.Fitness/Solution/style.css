@@ -1,0 +1,231 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css");
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700&display=swap');
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: PT Sans, sans-serif;
+    /* font-family: PT Serif, serif; */
+}
+
+header {
+    width: 100%;
+    background: rgb(208, 25, 25);
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+}
+
+header i {
+    padding-right: 0.7rem;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none outside;
+
+}
+
+main .intro {
+    background: url("../Requirements-and-Resources/image/fitness-main.jpg") no-repeat center center;
+    background-size: cover;
+    flex: 0 0 100%;
+}
+
+main .intro .main-nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .intro .main-nav ul li {
+    list-style: none outside;
+    padding: 1rem 2rem;
+    font-size: 13px;
+}
+
+main .intro .main-nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+main .intro .intro-title {
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 7rem;
+}
+
+main .intro .intro-info {
+    text-align: center;
+    color: #FFF;
+    padding: 2rem 27rem 0 27rem;
+}
+
+main .intro .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+main .intro .button a {
+    text-decoration: none;
+    color: #FFF;
+    background: rgb(208, 25, 25);
+    border: 1px solid rgb(208, 25, 25);
+    border-radius: 0.3rem;
+    padding: 0.4rem 0.6rem;
+    font-weight: bold;
+}
+
+main .info h2 {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+    /* border-bottom: 2px solid rgb(208, 25, 25); */
+}
+
+main .info h2:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 3%;
+    padding-top: 20px;
+    border-bottom: 2px solid rgb(208, 25, 25);
+}
+
+main .info .info-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .info h4 {
+    color: rgb(208, 25, 25);
+    padding-top: 1rem;
+}
+
+main .info article {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+main .info article span i {
+    font-size: 2rem;
+}
+
+main .info article p {
+    line-height: 1;
+    padding: 1rem 0 3rem 0;
+    font-size: 0.8rem;
+}
+
+.coaches {
+    margin-left: 6rem;
+}
+
+.equipment {
+    margin-right: 6rem;
+}
+
+.fa-dumbbell {
+    transform: rotate(-45deg);
+}
+
+main .coach-names {
+    background: rgb(239, 239, 239);
+}
+
+main .coach-names h2 {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 2rem;
+} 
+
+main .coach-names h2:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 3%;
+    padding-top: 20px;
+    border-bottom: 2px solid rgb(208, 25, 25);
+}
+
+main .coach-names .coach-info {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    text-align: center;
+}
+
+main .coach-names .coach-info article {
+    flex: 0 0 30%;
+    padding: 0 3rem 3rem 3rem;
+}
+
+main .coach-names .coach-info .image {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+main .coach-names .coach-info .image:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+main .coach-names .coach-info .image:after {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+main .coach-names .coach-info .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    border-radius: 0.3rem;
+}
+
+main .coach-names .coach-info h4 {
+    font-size: 1.2rem;
+}
+
+main .coach-names .coach-info p {
+    margin-bottom: 1rem;
+    color: rgb(184, 165, 158);
+}
+
+main .coach-names .coach-info .coach-spec {
+    font-weight: bold;
+    color: rgb(208, 25, 25);
+}
+
+footer {
+    padding: 0.5rem;
+    text-align: center;
+    background: rgb(208, 25, 25);
+}
