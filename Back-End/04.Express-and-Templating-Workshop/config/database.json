@@ -3,17 +3,31 @@
     "entities": [
         {
             "id": 1,
-            "name": "test1",
+            "name": "Gan356 Air SM",
             "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
-            "difficultyLevel": 10,
+            "difficultyLevel": 3,
+            "description": "VERY HARD CUBE"
+          },
+          {
+            "id": 2,
+            "name": "Eco-Dark",
+            "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
+            "difficultyLevel": 6,
             "description": "VERY HARD CUBE"
           },
           {
             "id": 3,
-            "name": "TEST 123",
-            "description": "TEST 123",
-            "imageUrl": "TEST 123",
-            "difficultyLevel": "1"
+            "name": "Pyraminx",
+            "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg",
+            "difficultyLevel": 1,
+            "description": "VERY HARD CUBE"
+          },
+          {
+            "id": 4,
+            "name": "Megaminx",
+            "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61HpQqVQ37L._SY355_.jpg",
+            "difficultyLevel": 3,
+            "description": "VERY HARD CUBE"
           }
     ]
 }
