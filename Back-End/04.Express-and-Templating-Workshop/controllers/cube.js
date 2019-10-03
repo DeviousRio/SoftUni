@@ -1,29 +1,35 @@
 const cubeModel = require('../models/cube');
 
 function index(req, res, next) {
-    const { from, to, search } = req.query;
-    const findFn = item => {
-        let result = true;
-        if (search) {
-            result = item.name.toLowerCase().includes(search);
-        }
-        if (result && from) {
-            result = +item.difficultyLevel >= +from;
-        }
-        if (result && to) {
-            result = +item.difficultyLevel <= +to;
-        }
-        return result;
-    }
-    cubeModel.find(findFn).then(cubes => {
-        res.render('index.hbs', { cubes, search, from, to });
+    // const { from, to, search } = req.query;
+    // const findFn = item => {
+    //     let result = true;
+    //     if (search) {
+    //         result = item.name.toLowerCase().includes(search);
+    //     }
+    //     if (result && from) {
+    //         result = +item.difficultyLevel >= +from;
+    //     }
+    //     if (result && to) {
+    //         result = +item.difficultyLevel <= +to;
+    //     }
+    //     return result;
+    // }
+
+    cubeModel.find().then(cubes => {
+        res.render('index.hbs', {
+            cubes
+        });
     }).catch(next);
 }
 
 function details(req, res, next) {
     const id = +req.params.id;
     cubeModel.getOne(id).then(cube => {
-        if (!cube) { res.redirect('/not-found'); return; }
+        if (!cube) {
+            res.redirect('/not-found');
+            return;
+        }
         res.render('details.hbs', { cube });
     }).catch(next);
 }
@@ -38,8 +44,9 @@ function about(req, res) {
 
 function postCreate(req, res) {
     const { name = null, description = null, imageUrl = null, difficultyLevel = null } = req.body;
-    const newCube = cubeModel.create(name, description, imageUrl, difficultyLevel);
-    cubeModel.insert(newCube).then(() => {
+    // const newCube = cubeModel.create(name, description, imageUrl, difficultyLevel);
+    cubeModel.create({ name, description, imageUrl, difficultyLevel }).then(cube => {
+        console.log(cube);
         res.redirect('/');
     });
 }
