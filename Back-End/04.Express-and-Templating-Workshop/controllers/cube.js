@@ -1,37 +1,40 @@
-const cubeModel = require('../models/cube');
+const { cubeModel } = require('../models');
 
 function index(req, res, next) {
-    // const { from, to, search } = req.query;
-    // const findFn = item => {
-    //     let result = true;
-    //     if (search) {
-    //         result = item.name.toLowerCase().includes(search);
-    //     }
-    //     if (result && from) {
-    //         result = +item.difficultyLevel >= +from;
-    //     }
-    //     if (result && to) {
-    //         result = +item.difficultyLevel <= +to;
-    //     }
-    //     return result;
-    // }
+    const { from, to, search } = req.query;
+    let query = {};
+    if (search) {
+        query = { ...query, name: { $regex: search } };
+    }
+    if (to) {
+        query = { ...query, difficultyLevel: { $lte: +to } };
+    }
+    if (from) {
+        query = {
+            ...query,
+            difficultyLevel: { ...query.difficultyLevel, $gte: +from }
+        };
+    }
 
-    cubeModel.find().then(cubes => {
+    cubeModel.find(query).then(cubes => {
         res.render('index.hbs', {
-            cubes
+            cubes,
+            search,
+            from,
+            to
         });
     }).catch(next);
 }
 
-function details(req, res, next) {
-    const id = +req.params.id;
-    cubeModel.getOne(id).then(cube => {
-        if (!cube) {
-            res.redirect('/not-found');
-            return;
-        }
+async function details(req, res, next) {
+    const id = req.params.id;
+    try {
+        const cube = await cubeModel.findById(id).populate('accessories');
+        if (!cube) { res.redirect('/not-found'); return; }
         res.render('details.hbs', { cube });
-    }).catch(next);
+    } catch (e) {
+        next(e);
+    }
 }
 
 function notFound(req, res) {
