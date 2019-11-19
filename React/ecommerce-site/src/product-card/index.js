@@ -1,7 +1,15 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import ProductPrice from '../product-price'
-import './style.css'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import ProductPrice from '../product-price';
+import styles from './styles.module.css'
+import { Link } from 'react-router-dom';
+
+const ProductImage = ({image, title}) => {
+    return (
+        <Image src={image} alt={title} />
+    )
+};
 
 class ProductCard extends Component {
     constructor(props) {
@@ -27,20 +35,26 @@ class ProductCard extends Component {
     }
 
     render() {
-        const { image, title, brand, price } = this.props
+        const { image, title, brand, price, id } = this.props;
+
         return (
-            <div className="product-tile" onMouseEnter={this.handleMouseOver} onMouseLeave={this.handleMouseOut}>
-                <img className="product-image" src={image} alt={title} />
+            <div className={StyleSheet.container} onMouseEnter={this.handleMouseOver} onMouseLeave={this.handleMouseOut}>
+                <Link to={`/product/${id}`}>
+                    <ProductImage image={image} title={title} />
+                </Link>
+
                 <div>
-                    <span className="product-brand">{brand}</span>
-                    <span className="product-title">{title}</span>
+                    <span className={styles["product-brand"]}>{brand}</span>
+                    <span className={styles["product-title"]}>{title}</span>
                     <ProductPrice price={price} />
-                    <span className="product-seconds">Seconds Counter: {this.state.counter}</span>
+                    <span className={styles["product-seconds"]}>Seconds Counter: {this.state.counter}</span>
                 </div>
             </div>
         )
     }
 }
+
+const Image = styled.img`width: 200px;`
 
 ProductCard.defaultProps = {
     image: '',
