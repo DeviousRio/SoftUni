@@ -5,13 +5,12 @@ import Link from '../shared/Link/Link';
 function Aside() {
     return <aside className="Aside">
         <ul>
-            <Link url="#">Going to 1</Link>
-            <Link url="#">Going to 2</Link>
-            <Link url="#">Going to 3</Link>
-            <Link url="#">Going to 4</Link>
-            <Link url="#">Going to 5</Link>
+            <Link to="/">Posts</Link>
+            <Link to="/create-posts">New Post</Link>
+            <Link to="/profile">Profile</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/login">Login</Link>
         </ul>
-    </aside>
-}
-
+    </aside>;
+};
 export default Aside;

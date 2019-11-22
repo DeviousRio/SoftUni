@@ -3,18 +3,15 @@ import './Footer.css';
 import Link from '../shared/Link/Link';
 
 function Footer() {
-    return <footer className="Footer">
+    return <nav className="Footer">
         <ul>
-            <Link url="#">
-                <img id="logo" src="logo192.png" alt="my-app-logo" />
-            </Link>
-            <Link url="#">Going to 1</Link>
-            <Link url="#">Going to 2</Link>
-            <Link url="#">Going to 3</Link>
-            <Link url="#">Going to 4</Link>
-            <Link url="#">Going to 5</Link>
+            <Link to="/">Posts</Link>
+            <Link to="/create-posts">New Post</Link>
+            <Link to="/profile">Profile</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/login">Login</Link>
         </ul>
-    </footer>
-}
+    </nav>;
+};
 
 export default Footer;
