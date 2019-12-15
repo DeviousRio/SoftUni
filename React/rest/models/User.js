@@ -17,10 +17,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         require: true
-    },
-
-    posts: [{ type: ObjectId, ref: "Origami" }]
-
+    }
 });
 
 userSchema.methods = {
