@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h3>Time is... ?</h3>
-    <p>{{timestamp}}</p>
+    <h3 @mouseover="showDate" @mouseleave="removeDate">Hover me!</h3>
+    <p v-show="active">{{timestamp}}</p>
   </div>
 </template>
 
@@ -10,7 +10,8 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      timestamp: ""
+      timestamp: "",
+      active: false
     };
   },
   created() {
@@ -23,6 +24,12 @@ export default {
       const time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + ' ч.';
       const dateTime = date + ' ' + time;
       this.timestamp = dateTime;
+    },
+    showDate() {
+      this.active = !this.active;
+    },
+    removeDate() {
+      this.active = !this.active;
     }
   }
 };
@@ -30,6 +37,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h3 {
+  cursor: pointer;
+}
+
 p {
   font-weight: bold;
 }
