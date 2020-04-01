@@ -10,7 +10,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      timestamp: "",
+      timestamp: '',
       active: false
     };
   },
