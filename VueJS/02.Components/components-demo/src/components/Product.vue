@@ -1,9 +1,10 @@
 <template>
   <div>
-    <span>{{type}}</span>
-    <span>{{price}}</span>
+    <span>Type: {{type}}</span>
+    <span>Price: {{price}}</span>
 
     <ul>
+      <li>Ingredients:</li>
       <li v-for="(ing, i) in ingredients" :key="i">{{ing}}</li>
     </ul>
   </div>
@@ -21,20 +22,20 @@ export default {
 </script>
 
 <style scoped>
-    div {
-        margin-top: 20px;
-    }
+div {
+  margin-top: 20px;
+}
 
-    span {
-        display: block;
-    }
+span {
+  display: block;
+}
 
-    ul {
-        margin: 0;
-        padding: 0;
-    }
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-    ul li {
-        list-style-type: none;
-    }
+ul li {
+  list-style-type: none;
+}
 </style>

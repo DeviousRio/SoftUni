@@ -14,7 +14,9 @@ import Product from './Product';
 
 export default {
     name: 'ProductList',
-    props: [ 'products' ],
+    props: {
+        products: Array
+    },
     components: {
         Product
     }
