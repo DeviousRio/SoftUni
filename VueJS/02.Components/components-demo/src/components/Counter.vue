@@ -5,10 +5,8 @@
 <script>
 export default {
     name: 'Counter',
-    data: function() {
-        return {
-            counter: 0
-        }
+    props: {
+        counter: Number
     }
 }
 </script>

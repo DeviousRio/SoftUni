@@ -1,22 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld />
-    <Counter />
+    <!-- <Counter :counter="counter" /> -->
+    <ProductList :products="products" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import Counter from './components/Counter.vue';
+import HelloWorld from "./components/HelloWorld.vue";
+// import Counter from "./components/Counter.vue";
+import ProductList from "./components/ProductList";
 
 export default {
-  name: 'App',
+  name: "App",
+  data: function() {
+    return {
+      counter: 0,
+      products: [
+        { type: 'Spaghetti', price: 11, ingredients: [ 'Pasta', 'Meatballs', 'Sauce' ] },
+        { type: 'Musaka', price: 10, ingredients: [ 'Potatoes', 'Mince', 'Eggs' ] },
+        { type: 'Pancakes', price: 12, ingredients: [ 'Eggs', 'Flour', 'Milk' ] }
+      ]
+    };
+  },
   components: {
     HelloWorld,
-    Counter
+    // Counter,
+    ProductList
   }
-}
+};
 </script>
 
 <style>
@@ -27,5 +40,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+p {
+  margin: 0;
+  margin-top: 20px;
+}
+
+ul li {
+  
 }
 </style>
