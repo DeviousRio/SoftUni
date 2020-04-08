@@ -1,15 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld />
-    <!-- <Counter :counter="counter" /> -->
-    <ProductList :products="products" />
+    <button @click="selectedComponent='HelloWorld'">Render Hello World</button>
+    <button @click="selectedComponent='ProductList'">Render Product List</button>
+
+    <keep-alive>
+      <component
+        :is="selectedComponent"
+        msg="Welcome to your Vue.js App"
+        :products="products"
+        :title="title"
+        @onChangeTitle="title=$event"
+      />
+    </keep-alive>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-// import Counter from "./components/Counter.vue";
 import ProductList from "./components/ProductList";
 
 export default {
@@ -18,15 +25,29 @@ export default {
     return {
       counter: 0,
       products: [
-        { type: 'Spaghetti', price: 11, ingredients: [ 'Pasta', 'Meatballs', 'Sauce' ] },
-        { type: 'Musaka', price: 10, ingredients: [ 'Potatoes', 'Mince', 'Eggs' ] },
-        { type: 'Pancakes', price: 12, ingredients: [ 'Eggs', 'Flour', 'Milk' ] }
-      ]
+        {
+          type: "Spaghetti",
+          price: 11,
+          ingredients: ["Pasta", "Meatballs", "Sauce"]
+        },
+        {
+          type: "Musaka",
+          price: 10,
+          ingredients: ["Potatoes", "Mince", "Eggs"]
+        },
+        { type: "Pancakes", price: 12, ingredients: ["Eggs", "Flour", "Milk"] }
+      ],
+      title: "This is my product list!",
+      selectedComponent: "HelloWorld"
     };
+  },
+  watch: {
+    title(oldValue, newValue) {
+      console.log([oldValue, newValue]);
+    }
   },
   components: {
     HelloWorld,
-    // Counter,
     ProductList
   }
 };
@@ -47,7 +68,8 @@ p {
   margin-top: 20px;
 }
 
-ul li {
-  
+button {
+  margin: 5px;
+  cursor: pointer;
 }
 </style>
