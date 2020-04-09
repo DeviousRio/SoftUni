@@ -1,23 +1,19 @@
 <template>
   <div>
-    <span>Type: {{type}}</span>
-    <span>Price: {{price}}</span>
-
-    <ul>
-      <li>Ingredients:</li>
-      <li v-for="(ing, i) in ingredients" :key="i">{{ing}}</li>
-    </ul>
+    <slot name="type"></slot>
+    <slot name="price"></slot>
+    <slot name="ingredients"></slot>
   </div>
 </template>
 
 <script>
 export default {
   name: "Product",
-  props: {
-    type: String,
-    price: Number,
-    ingredients: Array
-  }
+  // props: {
+  //   type: String,
+  //   price: Number,
+  //   ingredients: Array
+  // }
 };
 </script>
 
