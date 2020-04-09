@@ -1,11 +1,31 @@
 <template>
   <div>
-    <h1>Hello World!</h1>
+    <AppContent>
+      <template v-slot:nav>
+        <ul>
+          <li>
+            <a href="#">JS Conditional Statements</a>
+          </li>
+          <li>
+            <a href="#">JS Loops</a>
+          </li>
+          <li>
+            <a href="#">JS Objects</a>
+          </li>
+        </ul>
+      </template>
+    </AppContent>
   </div>
 </template>
 
 <script>
-export default {};
+import AppContent from "./shared/Content.vue";
+
+export default {
+  components: {
+    AppContent
+  }
+};
 </script>
 
 <style scoped>

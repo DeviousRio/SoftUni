@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <AppHeader />
-    <Home />
+    <AppHome />
     <AppFooter />
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue';
+import AppHome from './components/Home.vue';
 import AppHeader from './components/core/Header.vue';
 import AppFooter from './components/core/Footer.vue';
 
 export default {
   name: "App",
   components: {
-    Home,
+    AppHome,
     AppHeader,
     AppFooter
   }
@@ -34,153 +34,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-/** ************************************** **/
-
-header {
-  padding: 1em 2em;
-  margin: 0;
-}
-
-header section {
-  display: inline-block;
-  vertical-align: middle;
-  width: 45%;
-  margin: 0 2%;
-}
-
-header section:nth-child(1) {
-  text-align: left;
-}
-
-header section:nth-child(2) {
-  text-align: right;
-}
-
-header section:nth-child(2) img {
-  width: 28%;
-  max-width: 100%;
-  padding: 0 3em;
-  vertical-align: middle;
-}
-
-header button:nth-child(1) {
-  background: #fff;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 8px 12px;
-  cursor: pointer;
-  border: 1px solid #44a9f8;
-  outline: none;
-}
-
-header button:nth-child(1) a {
-  color: #44a9f8;
-  text-decoration: none;
-  font-family: "Lato", sans-serif;
-}
-
-header .svg-inline--fa {
-  width: 0.875em;
-  overflow: visible;
-  display: inline-block;
-  font-size: inherit;
-  height: 1em;
-  overflow: visible;
-  vertical-align: -0.125em;
-}
-
-header .social-icons {
-  transform: translate(-50%, -50%);
-  text-align: right;
-  display: inline;
-  vertical-align: bottom;
-}
-
-header .social-icons a {
-  color: white;
-  background: #44a9f8;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  font-family: fontawesome;
-  display: inline-block;
-  width: 35px;
-  height: 26px;
-  padding-top: 9px;
-  margin: 0 2px;
-  transition: all 0.5s;
-}
-
-/** ************************************** **/
-
-footer {
-  padding: 3em;
-  background-color: #303440;
-  color: white;
-}
-
-footer .section-header {
-  border-bottom: 3px solid #44a9f8;
-  margin: 1rem;
-  color: white;
-}
-
-footer span {
-  background: #44a9f8;
-  color: white;
-  font-size: 26px;
-  border-radius: 6px 6px 0 0;
-  padding: 3px 17px;
-}
-
-footer section {
-  width: 20%;
-  display: inline-block;
-  margin: 0.5em auto;
-  vertical-align: top;
-}
-
-footer ul {
-  padding-left: 16px;
-}
-
-footer li {
-  list-style: none;
-  border-bottom: 1px solid #444444;
-  padding-bottom: 6px;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
-}
-
-footer div:nth-child(2) section {
-  display: inline-block;
-  vertical-align: top;
-}
-
-footer div:nth-child(2) section:nth-child(2) {
-  width: 20%;
-  text-align: right;
-}
-
-footer div:nth-child(2) .social-icons a {
-  font-size: 26px;
-  margin: 0.3em;
-  padding: 10px;
-}
-
-footer .svg-inline--fa {
-  overflow: visible;
-  width: 1em;
-  display: inline-block;
-  font-size: inherit;
-  height: 1em;
-  vertical-align: -0.125em;
 }
 
 /** ************************************** **/
