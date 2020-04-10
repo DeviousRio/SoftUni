@@ -3,14 +3,8 @@
     <AppContent>
       <template v-slot:nav>
         <ul>
-          <li>
-            <a href="#">JS Conditional Statements</a>
-          </li>
-          <li>
-            <a href="#">JS Loops</a>
-          </li>
-          <li>
-            <a href="#">JS Objects</a>
+          <li v-for="(item, i) in subjects" :key="i">
+            <a href="#">{{item.name}}</a>
           </li>
         </ul>
       </template>
@@ -24,6 +18,12 @@ import AppContent from "./shared/Content.vue";
 export default {
   components: {
     AppContent
+  },
+  props: {
+    subjects: {
+      type: Array,
+      required: true
+    }
   }
 };
 </script>

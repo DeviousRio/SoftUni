@@ -1,22 +1,46 @@
 <template>
   <div id="app">
     <AppHeader />
-    <AppHome />
+    <div class="main">
+      <AppNavigation @navigate="navigationHandler($event)" :navItems="tutorials.technologies" :selectedIndex="selectedTechnologyIdx" />
+      <AppHome :subjects="subjects" />
+    </div>
     <AppFooter />
   </div>
 </template>
 
 <script>
-import AppHome from './components/Home.vue';
-import AppHeader from './components/core/Header.vue';
-import AppFooter from './components/core/Footer.vue';
+import tutorials from "./tutorials.json";
+
+import AppHome from "./components/Home.vue";
+import AppHeader from "./components/core/Header.vue";
+import AppFooter from "./components/core/Footer.vue";
+// import AppContent from "./components/core/Content.vue";
+import AppNavigation from "./components/core/Navigation.vue";
 
 export default {
   name: "App",
   components: {
     AppHome,
     AppHeader,
-    AppFooter
+    AppFooter,
+    AppNavigation
+  },
+  data() {
+    return {
+      tutorials,
+      selectedTechnologyIdx: 0
+    };
+  },
+  methods: {
+    navigationHandler(idx) {
+      this.selectedTechnologyIdx = idx;
+    }
+  },
+  computed: {
+    subjects() {
+      return this.tutorials.technologies[this.selectedTechnologyIdx].subjects;
+    }
   }
 };
 </script>
@@ -38,76 +62,76 @@ body {
 
 /** ************************************** **/
 
-main div.navigation {
+.main div.navigation {
   background: #44a9f8;
   font-size: 20px;
   text-align: left;
   display: flex;
 }
 
-main div.navigation ul {
+.main div.navigation ul {
   display: inline-block;
   text-align: left;
 }
 
-main div.navigation ul:nth-child(1) {
+.main div.navigation ul:nth-child(1) {
   width: 75%;
 }
 
-main div.navigation ul:nth-child(2) {
+.main div.navigation ul:nth-child(2) {
   width: 20%;
   text-align: right;
 }
 
-main div.navigation li {
+.main div.navigation li {
   list-style: none;
   display: inline-block;
   margin-right: 3%;
 }
 
-main div.navigation ul:nth-child(2) li {
+.main div.navigation ul:nth-child(2) li {
   width: 100%;
 }
 
-main div.navigation li a {
+.main div.navigation li a {
   padding: 1%;
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-main div.navigation li a:hover {
+.main div.navigation li a:hover {
   text-decoration: underline;
 }
 
-main div.navigation li a.active {
+.main div.navigation li a.active {
   text-decoration: underline;
 }
 
-main div.main-content {
+.main div.main-content {
   display: flex;
 }
 
-main div.main-content .content-navigation {
+.main div.main-content .content-navigation {
   width: 20%;
   border-right: 3px solid whitesmoke;
   border-left: 3px solid whitesmoke;
 }
 
-main div.main-content .subject-info {
+.main div.main-content .subject-info {
   padding: 1%;
 }
 
-main div.main-content .subject-info p {
+.main div.main-content .subject-info p {
   font-size: 18px;
 }
 
-main .main-content .content-navigation ul {
+.main .main-content .content-navigation ul {
   margin: 0;
   padding: 0;
 }
 
-main div.main-content .content-navigation ul li {
+.main div.main-content .content-navigation ul li {
   list-style-type: none;
   padding: 10%;
   font-size: 23px;
@@ -115,31 +139,31 @@ main div.main-content .content-navigation ul li {
   text-align: left;
 }
 
-main div.main-content .content-navigation ul li:hover {
+.main div.main-content .content-navigation ul li:hover {
   background: whitesmoke;
 }
 
-main div.main-content .content-navigation ul li:active {
+.main div.main-content .content-navigation ul li:active {
   border-right: 5px solid #44a9f8;
 }
 
-main div.main-content .content-navigation ul li.active {
+.main div.main-content .content-navigation ul li.active {
   border-right: 5px solid #44a9f8;
 }
 
-main div.main-content .content-navigation ul li a {
+.main div.main-content .content-navigation ul li a {
   color: black;
   text-decoration: none;
 }
 
-main .content-info {
+.main .content-info {
   width: 80%;
   padding: 1%;
   font-size: 18px;
   display: block;
 }
 
-main .content-info .user-form input {
+.main .content-info .user-form input {
   padding: 1%;
   width: 25%;
   border: none;
@@ -148,19 +172,19 @@ main .content-info .user-form input {
   font-family: inherit;
 }
 
-main .content-info .user-form input:focus {
+.main .content-info .user-form input:focus {
   background: rgb(255, 248, 198);
 }
 
-main .content-info .user-form .form-group {
+.main .content-info .user-form .form-group {
   margin-bottom: 1%;
 }
 
-main .content-info .user-form .form-group img {
+.main .content-info .user-form .form-group img {
   vertical-align: bottom;
 }
 
-main .content-info .user-form button {
+.main .content-info .user-form button {
   padding: 1%;
   background: #44a9f8;
   color: white;
@@ -170,19 +194,19 @@ main .content-info .user-form button {
   cursor: pointer;
 }
 
-main .content-info .user-links a {
+.main .content-info .user-links a {
   color: black;
   text-decoration: none;
   font-weight: normal;
   margin: 2%;
 }
 
-main .content-info .user-links a:hover {
+.main .content-info .user-links a:hover {
   color: #44a9f8;
   text-decoration: underline;
 }
 
-main .content-info .user-links .active-route {
+.main .content-info .user-links .active-route {
   color: #44a9f8;
   text-decoration: underline;
 }
