@@ -3,7 +3,10 @@
     <AppHeader />
     <div class="main">
       <AppNavigation @navigate="navigationHandler($event)" :navItems="tutorials.technologies" :selectedIndex="selectedTechnologyIdx" />
-      <AppHome :subjects="subjects" />
+      <!-- <AppLogin />
+      <AppRegister /> -->
+      <AppCreateSubject :technologies="tutorials.technologies" :subjects="subjects" @create="createHandler($event)" />
+      <!-- <AppHome :subjects="subjects" /> -->
     </div>
     <AppFooter />
   </div>
@@ -11,17 +14,21 @@
 
 <script>
 import tutorials from "./tutorials.json";
-
-import AppHome from "./components/Home.vue";
+// import AppHome from "./components/Home.vue";
+// import AppLogin from "./components/Login.vue";
+// import AppRegister from "./components/Register.vue";
+import AppCreateSubject from "./components/CreateSubject.vue";
 import AppHeader from "./components/core/Header.vue";
 import AppFooter from "./components/core/Footer.vue";
-// import AppContent from "./components/core/Content.vue";
 import AppNavigation from "./components/core/Navigation.vue";
 
 export default {
   name: "App",
   components: {
-    AppHome,
+    // AppHome,
+    // AppLogin,
+    // AppRegister,
+    AppCreateSubject, 
     AppHeader,
     AppFooter,
     AppNavigation
@@ -35,6 +42,10 @@ export default {
   methods: {
     navigationHandler(idx) {
       this.selectedTechnologyIdx = idx;
+    },
+    createHandler({ technologyId, subject: name, htmlContent: content }) {
+      const selectedTechnology = this.tutorials.technologies.find(t => t.id === technologyId);
+      selectedTechnology.subjects = selectedTechnology.subjects.concat({ name, content});
     }
   },
   computed: {
@@ -143,11 +154,7 @@ body {
   background: whitesmoke;
 }
 
-.main div.main-content .content-navigation ul li:active {
-  border-right: 5px solid #44a9f8;
-}
-
-.main div.main-content .content-navigation ul li.active {
+ div.main-content .content-navigation ul li.active {
   border-right: 5px solid #44a9f8;
 }
 
